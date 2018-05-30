@@ -1,0 +1,167 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>聊天框demo</title>
+    <style>
+
+        
+        #l-chat-main {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            margin-top: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+        }
+
+        /* 控制区样式 */
+
+        #l-chat-sendsection {
+            position: relative;
+            background-color: gainsboro;
+            height: 60px;
+            line-height: 60px;
+            padding-left: 180px;
+        }
+
+        #l-chat-textarea {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+        }
+
+        #l-chat-close,
+        #l-chat-send {
+            color: white;
+            background-color: #5FB878;
+            display: inline-block;
+            width: 50px;
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+
+        /* 聊天内容区样式 */
+
+        #l-chat-content {
+            min-height: 750px;
+        }
+
+        #l-chat-content ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        #l-chat-content li {
+            list-style: none;
+            text-align: right;
+            padding: 10px 70px 10px 10px;
+        }
+
+        #l-chat-content #l-chat-listtitle p {
+            margin: 10px 0;
+        }
+
+        #l-chat-content #l-chat-listtitle img {
+            position: absolute;
+            right: 5px;
+            width: 46px;
+            height: 46px;
+            border-radius: 23px;
+        }
+
+        #l-chat-content #l-chat-time {
+            position: absolute;
+            right: 70px;
+        }
+
+        #l-chat-content #l-chat-listcont {
+            background-color: #5FB878;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            position: relative;
+            margin-top: 40px;
+            max-width: 80%;
+            word-wrap: break-word;
+            text-align: left;
+        }
+
+        #l-chat-content #l-chat-listcont::after {
+            position: absolute;
+            left: 100%;
+            top: 18px;
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-width: 0 15px 15px 15px;
+            border-style: solid;
+            border-color: transparent transparent transparent #5FB878;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+
+    <div id="l-chat-main">
+        <div id="l-chat-content">
+            <ul>
+                <li class="l-chat-me">
+                    <div id="l-chat-listtitle">
+                        <p id="l-chat-time">2018-05-30 17:51:58
+                            <i>学员1</i>
+                        </p>
+                        <img src="qq-icon.png" alt="">
+                    </div>
+                    <div id="l-chat-listcont">
+                        1231212312123123112312312312312321231212312311231231231231232123121231231123123123123123
+                    </div>
+                </li>
+
+                <li class="l-chat-he">
+                    <div id="l-chat-listtitle">
+                        <p id="l-chat-time">2018-05-30 17:51:58
+                            <i>学员1</i>
+                        </p>
+                        <img src="qq-icon.png" alt="">
+                    </div>
+                    <div id="l-chat-listcont">
+                        1231212312123123112312312312312321231212312311231231231231232123121231231123123123123123
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="l-chat-controls">
+            <div id="l-chat-btnsection"></div>
+            <div id="l-chat-sendsection">
+                <textarea name="" id="l-chat-textarea" cols="20" rows="2">输入</textarea>
+                <a id="l-chat-close">关闭</a>
+                <a id="l-chat-send">发送</a>
+            </div>
+        </div>
+
+    </div>
+    <script src="http://cdn.wy.by-health.com/lib/jquery/jquery-1.11.2.min.js "></script>
+    <script>
+        $(function () {
+
+            $('#l-chat-content').css({
+                'height': document.documentElement.clientHeight - 80
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
