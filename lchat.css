@@ -1,0 +1,190 @@
+#l-chat-main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* right: -300px; */
+    width: 300px;
+    margin-top: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .6);
+    transition: all .25s ease-out;
+    padding-top: 30px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#l-chat-main #l-chat-history {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 30px;
+    transform: translateX(-50%);
+    font-size: 13px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #5FB878;
+    color: white;
+}
+
+
+/* 控制区样式 */
+
+#l-chat-sendsection {
+    position: relative;
+    background-color: gainsboro;
+    height: 60px;
+    line-height: 60px;
+    /* padding-left: 180px; */
+}
+
+#l-chat-textarea {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#l-chat-close,
+#l-chat-send {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    color: white;
+    background-color: #5FB878;
+    display: inline-block;
+    width: 50px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* 关闭按钮 */
+
+#l-chat-close {
+    left: 5px;
+}
+
+/* 发送按钮 */
+
+#l-chat-send {
+    right: 5px;
+}
+
+#l-chat-close:hover,
+#l-chat-send:hover {
+    box-shadow: 0 0 10px #5FB878;
+}
+
+/* 聊天内容区样式 */
+
+#l-chat-content {
+    position: relative;
+    min-height: 750px;
+    overflow: auto;
+}
+
+#l-chat-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+#l-chat-content li {
+    list-style: none;
+}
+
+#l-chat-content .l-chat-me {
+    text-align: right;
+    padding: 10px 70px 10px 10px;
+}
+
+#l-chat-content .l-chat-he {
+    text-align: left;
+    padding: 10px 10px 10px 70px;
+}
+
+.l-chat-me #l-chat-time {
+    position: absolute;
+    right: 70px;
+}
+
+.l-chat-he #l-chat-time {
+    position: absolute;
+    left: 70px;
+}
+
+#l-chat-content #l-chat-listtitle p {
+    font-size: 15px;
+    margin: 10px 0;
+    color: gray;
+}
+
+/* #l-chat-content #l-chat-listtitle i {
+            font-style: normal;
+        } */
+
+.l-chat-me #l-chat-listtitle img {
+    position: absolute;
+    right: 5px;
+    width: 46px;
+    height: 46px;
+    border-radius: 23px;
+}
+
+.l-chat-he #l-chat-listtitle img {
+    position: absolute;
+    left: 5px;
+    width: 46px;
+    height: 46px;
+    border-radius: 23px;
+}
+
+#l-chat-content #l-chat-listcont {
+    background-color: #5FB878;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    margin-top: 40px;
+    max-width: 80%;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.l-chat-me #l-chat-listcont::after {
+    position: absolute;
+    left: 100%;
+    top: 10px;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 0 12px 12px 12px;
+    border-style: solid;
+    border-color: transparent transparent transparent #5FB878;
+}
+
+.l-chat-he #l-chat-listcont::after {
+    position: absolute;
+    right: 100%;
+    top: 10px;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 0 12px 12px 12px;
+    border-style: solid;
+    border-color: transparent #5FB878 transparent transparent;
+}
+
+#l-checkbox:checked+#l-chat-main {
+    right: 0;
+}
+
+#headimg {
+    height: 50px;
+    border-radius: 25px;
+}
